@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+    <title> @ViewData["Title"] = "teste"</title>
+</head>
+<body>
+    <div>
+        <h1>View Index.cshtml do controlador TesteController</h1>
+
+        <div>
+        @*     <!---><b>Nome:</b> @ViewData["Nome"]; <br />
+            <b>Email:</b> @ViewData["Email"]; <br />
+            <b>Curso:</b> @ViewData["Curso"]; <br />
+            <b>Data de Início:</b> @ViewData["DataInicio"]; <br />-->
+ *@
+
+    @*         <b>Nome:</b> @ViewBag.Nome; <br />
+             <b>Email:</b> @ViewBag.Email; <br /> *@
+
+             <div>
+                 <ul>
+                    @foreach(string strPais in ViewBag.Paises)
+                    {
+                        <li>@strPais</li>
+                    }
+                </ul>
+             </div>
+
+                    
+        </div>
+    </div>
+</body>
+</html>

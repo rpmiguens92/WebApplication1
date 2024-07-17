@@ -1,0 +1,61 @@
+﻿@model WebApplication1.Models.Client;
+
+@* //a view recebe objectos deste tipo mas só um tipo de objeto neste caso objecto tipo client *@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@* //model passa maior quantidade de info - views fortmente tipificadas *@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+</head>
+<body>
+    <form action="/Clients/SaveClient" method="post">
+        <fieldset>
+            <legend> Cliente </legend>
+            <b>@ViewBag.Nome</b>
+            <b>@ViewData["Email"]</b>
+            <div>
+                <label for="ClientId">Id</label>
+            </div>
+
+            <div>
+                <input type="text" value="@Model.ClientId" id="ClientId" name="ClientId" />
+            </div>
+
+            <div>
+                <label for="ClientName">Name</label>
+            </div>
+
+            <div>
+                <input type="text" value="@Model.ClientName" name="ClientName" name="ClientName" />
+            </div>
+
+            <div>
+                <label for="ClientEmail">Email</label>
+            </div>
+
+            <div>
+                <input type="text" value="@Model.ClientEmail" email="ClientEmail" name="ClientEmail" />
+            </div>
+
+            <div>
+                <label for="ClientPhone">Phone</label>
+            </div>
+
+            <div>
+                <input type="text" value="@Model.ClientPhone" phone="ClientPhone" name="ClientPhone" />
+            </div>
+            <p>
+                <input type="submit" value="Enviar"/>
+            </p>
+
+        </fieldset>
+</form>
+  
+</body>
+</html>
